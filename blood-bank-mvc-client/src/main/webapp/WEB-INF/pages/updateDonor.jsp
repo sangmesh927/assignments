@@ -6,33 +6,73 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Update Tour</title>
+<link rel="stylesheet" href="styll.css" />
 </head>
 <body>
-
-<form:form action="updatedonor" method="POST">
+<header>
+	<%@ include file="bloodDonorMenu.jsp" %>
+</header>
 <div>
-<label for=" ">Tour ID</label>
-<form:input path="tourId"/>
-</div>
-<div>
-<label for=" ">TourName</label>
-<form:input path="tourName"/>
-</div>
-
-<div>
-<label for="">Duration</label>
-<form:input path="duration"/>
-</div>
-
-<div>
-<label for="">Cost</label>
-<form:input path="cost"/>
-</div>
-<div>
-<input type="submit" value="add">
-</div>
+<form:form action="updateDonor" post="POST">
+	
+	<div>
+		<label for="">Donor Id</label>
+	 	<form:input path="donorId" required="required" />
+	</div>
+	<div>
+		<label for="">Name</label>
+	 	<form:input path="name" required="required" />
+	</div>
+	<div>
+		<label for="">Mobile Number</label>
+	 	<form:input type="number" path="mobileNumber" required="required"/>
+	</div>
+	<div>
+		<label for="">Gender</label>
+	 	<form:select path="gender">
+	 		<form:option value="male" label="Male" />
+	 		<form:option value="female" label="Female" />
+	 	</form:select>
+	</div>
+	<div>
+		<label for="">Blood Group</label>
+	 	<form:select path="bloodGroup">
+	 		<form:option value="apos" label="A+" />
+	 		<form:option value="aneg" label="A-" />
+	 		<form:option value="bpos" label="B+" />
+	 		<form:option value="bneg" label="B-" />
+	 		<form:option value="opos" label="O+" />
+	 		<form:option value="oneg" label="O-" />
+	 		<form:option value="abpos" label="AB+" />
+	 		<form:option value="abneg" label="AB-" />
+	 	</form:select>
+	</div>
+	<div>
+		<label for="">Email</label>
+	 	<form:input path="email" required="required"/>
+	</div>
+	<div>
+		<label for="">Date of Birth</label>
+		<form:input type="date" path="dateOfBirth" required="required"/>
+	</div>
+	<div>
+		<label for="">last Date of Donation</label>
+		<form:input type="date" path="lastDateOFDonation" required="required"/>
+	</div>
+	<div>
+		<label for="">city</label>
+	 	<form:select path="city">
+	 		<form:option value="Bangalore" label="Bangalore" />
+	 		<form:option value="Mysore" label="Mysore" />
+	 		<form:option value="Bidar" label="Bidar" />
+	 		<form:option value="Udupi" label="Udupi" />
+	 	</form:select>
+	</div>
+	<div>
+		<input type="submit" value="Update">
+	</div>
 </form:form>
-
+</div>
 
 </body>
 </html>

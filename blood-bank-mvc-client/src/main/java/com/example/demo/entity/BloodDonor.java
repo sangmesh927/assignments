@@ -18,7 +18,7 @@ public class BloodDonor {
 	int donorId;
 	String name;
 	int age;
-	int mobileNumber;
+	long mobileNumber;
 	String gender;
 	String bloodGroup;
 	String email;

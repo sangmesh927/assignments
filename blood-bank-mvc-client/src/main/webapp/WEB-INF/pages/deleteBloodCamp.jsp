@@ -4,22 +4,19 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Delete donor</title>
+<title>Insert title here</title>
 <link rel="stylesheet" href="styll.css" />
 </head>
 <body>
-<header>
-	<%@ include file="bloodDonorMenu.jsp" %>
-</header>
-<form action="delete" method="POST">
+
+<form action="deleteBloodCamp" method="POST">
 	<div>
-		<label for="">Enter Donor Id</label>
-	 	<input type="number" name="id" required/>
+		<label for="">Enter Blood Camp ID</label>
+	 	<input type="text" name="campId" required/>
 	</div>
 	<div>
 		<input type="submit" value="Remove" />
 	</div>
 </form>
-
 </body>
 </html>

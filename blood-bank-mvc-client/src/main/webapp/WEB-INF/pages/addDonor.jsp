@@ -6,9 +6,12 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Add Donor </title>
+<link rel="stylesheet" href="styll.css" />
 </head>
 <body>
-
+<header>
+	<%@ include file="bloodDonorMenu.jsp" %>
+</header>
 <form:form action="submit" post="POST">
 	<div>
 		<label for="">Name</label>
@@ -47,20 +50,17 @@
 		<form:input type="date" path="dateOfBirth" required="required"/>
 	</div>
 	<div>
+	    <p>Enter last date of donation</p>
 		<label for="">last Date of Donation</label>
 		<form:input type="date" path="lastDateOFDonation" required="required"/>
 	</div>
 	<div>
 		<label for="">city</label>
 	 	<form:select path="city">
-	 		<form:option value="jaipur" label="Jaipur" />
-	 		<form:option value="delhi" label="Delhi" />
-	 		<form:option value="jodhpur" label="Jodhpur" />
-	 		<form:option value="udaipur" label="Udaipur" />
-	 		<form:option value="ajmer" label="Ajmer" />
-	 		<form:option value="amer" label="Amer" />
-	 		<form:option value="gurgaon" label="Gurgaon" />
-	 		<form:option value="noida" label="Noida" />
+	 		<form:option value="Bangalore" label="Bangalore" />
+	 		<form:option value="Mysore" label="Mysore" />
+	 		<form:option value="Bidar" label="Bidar" />
+	 		<form:option value="Udupi" label="Udupi" />
 	 	</form:select>
 	</div>
 	<div>

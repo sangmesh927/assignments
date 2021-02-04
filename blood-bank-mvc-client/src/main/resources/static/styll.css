@@ -1,0 +1,35 @@
+@charset "ISO-8859-1";
+
+
+h1 {
+  display: block;
+  font-size: 2em;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+
+a:link, a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+
+p{
+	font:20px;
+}
+table, th, td {
+  border: 1px solid black;
+}
+
+
+ table{
+ border: 1px solid black;
+ width: 100%;
+ }

@@ -17,10 +17,10 @@ public interface DonorRepository extends JpaRepository<BloodDonor, Integer>{
 	 
 	 
 	 
-	 @Query(value="select *from donorTab1 where bloodGroup=:srchCondtion",nativeQuery=true)
+	 @Query(value="select *from donor_table where bloodGroup=:srchCondtion",nativeQuery=true)
 	 List<BloodDonor> findEligibleDonorByBloodGroup(@Param("srchCondtion") String bloodGroup);
 	 BloodDonor findByDonorId(int id);
 	 
-	 @Query(value = "select *from donorTab1 where city=:srchCondtion",nativeQuery=true)
+	 @Query(value = "select *from donor_table where  dateOfBirth > date(now()-interval 6 month)",nativeQuery=true)
      List<BloodDonor> findEligibleDonorByCity(@Param("srchCondtion") String city);
 }

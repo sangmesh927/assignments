@@ -3,8 +3,6 @@ package com.example.demo.entity;
 import java.time.LocalDate;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -14,25 +12,15 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.FieldDefaults;
 
-
 @Entity
-@Table(name="donor_table")
+@Table(name="blood_camp_table")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class BloodDonor {
-
+public class BloodCamp {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	int donorId;
-	String name;
-	int age;
-	long mobileNumber;
-	String gender;
-	String bloodGroup;
-	String email;
-	LocalDate dateOfBirth;
-	LocalDate lastDateOFDonation;
-	String city;
+	String campName;
+	String place;
+	LocalDate campDate;
 }

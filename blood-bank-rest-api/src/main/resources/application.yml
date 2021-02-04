@@ -4,7 +4,7 @@ spring:
     url: jdbc:mysql://localhost:3306/test
     username: root
     password: ac81559
-  application:    name: tour-service  
+  application:    name: blood-bank-service  
   
   jpa:    show-sql: true 
     hibernate:      ddl-auto: update

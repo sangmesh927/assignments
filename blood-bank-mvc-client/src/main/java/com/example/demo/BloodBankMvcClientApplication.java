@@ -6,6 +6,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.example.demo.entity.BloodCamp;
+import com.example.demo.entity.BloodCampDonor;
 import com.example.demo.entity.BloodDonor;
 
 
@@ -30,6 +32,18 @@ public class BloodBankMvcClientApplication {
 	@Bean
 	public BloodDonor bloodDonor() {
 		return new BloodDonor();
+		
+	}
+	
+	@Bean
+	public BloodCamp bloodcamp() {
+		return new BloodCamp();
+		
+	}
+	
+	@Bean
+	public BloodCampDonor bloodcampDonor() {
+		return new BloodCampDonor();
 		
 	}
 

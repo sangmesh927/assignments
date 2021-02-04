@@ -4,15 +4,9 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>success</title>
-<link rel="stylesheet" href="styll.css" />
+<title>Insert title here</title>
 </head>
 <body>
-<header>
-	<%@ include file="bloodDonorMenu.jsp" %>
-</header>
-<div>
-<p>${message}</p>
-</div>
+
 </body>
 </html>

@@ -82,16 +82,19 @@ public class DonorController {
 	}
 
 	@DeleteMapping(path = "donors/{id}")
-	public ResponseEntity<String> deleteDonor(@PathVariable("id") int id) throws Exception{
+	public ResponseEntity<String> deleteDonor(@PathVariable("id") int id) {
 		String message = null;
 		
 			boolean deleted = this.service.removeDonor(id);
 			if(deleted) {
 				message = "Donor deleted";
-				return ResponseEntity.ok().body(message);
+				
 			} else {
-				throw new Exception();
+				message = "Donor not present";
 			}
+			return ResponseEntity.ok().body(message);
+	
 	}
+	
 
 }
